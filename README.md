@@ -20,7 +20,7 @@ Before running the Redshift Rake tasks, you need to configure your config/creden
    Note: If you don't have a master key or if you're setting up credentials for the first time, you can create a new master key by running `rails credentials:edit`.
 
 4. Add the following structure under the appropriate environment (development, test, production, etc.):
-```bash
+```yml
    redshift:
      host: <redshift_host>
      database: <redshift_database>
@@ -38,7 +38,7 @@ The `redshift:test_connection` task allows you to test the connection to your Re
 
 To run the task, execute the following command:
 
-```bash
+```rake
 rake redshift:test_connection
 ```
 
@@ -50,7 +50,7 @@ The `redshift:etl` task is used for loading transformed data or executing the ET
 
 To run the task, execute the following command:
 
-```bash
+```rake
 RAILS_ENV=redshift_development rake redshift:etl
 ```
 
